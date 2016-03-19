@@ -1,0 +1,5 @@
+---
+- hosts: mirror
+  remote_user: pi
+  roles:
+  - DIST_Update

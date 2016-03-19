@@ -1,0 +1,5 @@
+#!/bin/bash
+sleep 30
+screen -d -m -S Stocks /home/pi/stocks.sh 
+screen -d -m -S Weather {{ installLocation }}/WeatherReport/startup.sh
+screen -d -m -S Twitch /home/pi/twitch.sh

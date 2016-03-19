@@ -1,0 +1,3 @@
+---
+- name: Create startup script from template
+  template: src=startup.sh.j2 dest={{ installLocation }}/startup.sh

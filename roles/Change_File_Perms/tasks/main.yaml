@@ -1,0 +1,8 @@
+- name: Change owner to pi
+  file: path={{ installLocation }} owner=pi group=pi recurse=yes
+
+- name: Make startup scripts executable
+  file: path={{ installLocation }}/startup.sh mode=0755
+
+- name: Make Weather Report startup script executable
+  file: path={{ installLocation }}/WeatherReport/startup.sh mode=0755

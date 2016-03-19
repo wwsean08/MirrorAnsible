@@ -1,0 +1,10 @@
+---
+amqpHost: 127.0.0.1
+amqpUser: admin
+amqpPass: admin
+APIKey: INSERT API KEY
+updateInterval: 15
+city: Seattle
+state: WA
+downloadURL: https://github.com/wwsean08/WeatherReport/releases/download/v0.1/WeatherReport.zip
+installLocation: /home/pi/WeatherTest

@@ -1,0 +1,9 @@
+---
+- hosts: mirror
+  remote_user: pi
+  roles:
+  - DIST_Update
+  - Install_Webapp
+  - Install_Weather
+  - Setup_Autostart
+  - Change_File_Perms

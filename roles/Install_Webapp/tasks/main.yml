@@ -1,0 +1,18 @@
+---
+- name: Install Git
+  apt: name=git state=present
+
+- name: Install RabbitMQ
+  apt: name=rabbitmq-server state=latest
+
+- name: Install apache2
+  apt: name=apache2 state=latest
+
+- name: Enable necessary RabbitMQ plugins
+  rabbitmq_plugin: names=rabbitmq_web_stomp,rabbitmq_management state=enabled
+
+- name: Add new admin RabbitMQ user
+  rabbitmq_user: user=admin password=admin vhost=/ configure_priv=.* read_priv=.* write_priv=.* state=present
+
+- name: Install/Update MirrorDisplay Git repo
+  git: repo=https://github.com/wwsean08/MirrorDisplay.git dest=/var/www/html/MirrorDisplay force=yes
